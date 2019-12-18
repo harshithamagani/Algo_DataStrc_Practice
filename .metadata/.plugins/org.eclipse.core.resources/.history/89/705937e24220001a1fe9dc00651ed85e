@@ -1,0 +1,20 @@
+package algo.leet.code;
+
+class Node{
+	int val;
+	Node next;
+	
+	Node(int val){
+		this.val=val;
+		this.next=null;
+	}
+}
+
+class MinStack {
+	Node head;
+	MinStack(){
+		this.head=null;
+	}
+}
+
+

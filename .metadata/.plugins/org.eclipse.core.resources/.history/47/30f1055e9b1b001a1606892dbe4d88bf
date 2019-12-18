@@ -1,0 +1,41 @@
+package exmaple.com;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class AlgoExpMoveElementToEnd {
+	public static List<Integer> moveElementToEndAdv(List<Integer> array, int toMove) {
+		int i=0;
+		int j=0;
+		while(i<array.size()) {
+			
+		}
+		return array;
+	}
+	
+	//O(n) time and O(n) space
+	 public static List<Integer> moveElementToEndBasic(List<Integer> array, int toMove) {
+		    // Write your code here.
+		    List<Integer> newArr = new ArrayList<Integer>();
+		    
+		    for(Integer num : array) {
+		    	if(num != toMove) {
+		    		newArr.add(num);
+		    		}	
+		    }
+		    for(Integer num : array) {
+		    	if(num == toMove) {
+		    		newArr.add(num);
+		    		}	
+		    }
+		 	return newArr;
+		  }
+	 public static void main(String[] args) {
+		Integer [] arr = {2,1,2,2,2,3,4,2};
+		List<Integer> array = Arrays.asList(arr);
+		int toMove = 2;
+		array = moveElementToEnd(array,toMove);
+		System.out.println(array.toString());
+	}
+}

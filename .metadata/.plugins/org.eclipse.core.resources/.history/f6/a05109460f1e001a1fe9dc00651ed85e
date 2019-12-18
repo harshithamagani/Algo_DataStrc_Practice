@@ -1,0 +1,17 @@
+package algo.practise;
+
+public class Car {
+public static void main(String[] args) {
+	int [] arr= {1,2,3,4};
+	call_arr(arr[0], arr);
+	System.out.println(arr[0]+","+arr[1]);
+	
+}
+
+private static void call_arr(int i, int[] arr) {
+	// TODO Auto-generated method stub
+	arr[i]=6;
+	i=5;
+}
+
+}

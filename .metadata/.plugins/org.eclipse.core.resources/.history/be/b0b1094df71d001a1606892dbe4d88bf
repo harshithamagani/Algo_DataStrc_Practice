@@ -1,0 +1,36 @@
+package exmaple.com.tree;
+
+import java.io.IOException;
+
+class AirPlain {
+	public AirPlain()throws IOException{
+		System.out.println("Air plain");
+		throw new IOException();
+	}
+ }
+
+
+class AirJet extends AirPlain{
+
+	public AirJet() throws IOException {
+		System.out.println("AirJet");
+		try {
+			super();
+		}
+		catch(IOException) {
+			
+		}
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+public class Test{
+	public static void main(String[] args) {
+		try {
+			new AirJet();
+		}
+		catch(IOException e) {
+			System.out.println("IOException is trown");
+		}
+	}
+}

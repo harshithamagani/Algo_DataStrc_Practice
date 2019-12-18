@@ -1,0 +1,10 @@
+package exmaple.com;
+
+public class AlgoExpClosestNumInArrs {
+	  public static int[] smallestDifference(int[] arrayOne, int[] arrayTwo) {
+		return arrayTwo;
+	  }
+	  public static void main(String[] args) {
+		
+	}
+}

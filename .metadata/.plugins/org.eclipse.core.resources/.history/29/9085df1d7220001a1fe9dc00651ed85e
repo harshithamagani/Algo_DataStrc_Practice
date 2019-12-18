@@ -1,0 +1,26 @@
+package algo.leet.code;
+
+import java.util.Arrays;
+
+public class ValidAnagram {
+	 public static boolean isAnagram(String s, String t) {
+		char [] sArr = s.toCharArray();
+		char [] tArr = t.toCharArray();
+		
+		Arrays.sort(sArr);
+		Arrays.sort(tArr);
+
+		System.out.println(Arrays.toString(tArr));
+		System.out.println(Arrays.toString(sArr));
+		if(sArr.equals(tArr)) {
+			return true;
+		}
+		return false; 
+	    }
+	 public static void main(String[] args) {
+		 String str1 = "anagram";
+		 String str2 = "nagaram";
+		 
+		 System.out.println(isAnagram(str1,str2));
+	}
+}

@@ -1,0 +1,32 @@
+package exmaple.com;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class AlgoThreeNumSum {
+	  public static List<Integer[]> threeNumberSumBasic(int[] array, int targetSum) {
+		    // Write your code here.
+		  List<Integer[]> list = new ArrayList<Integer[]>();
+		  
+		  for(int i=0;i<array.length;i++) {
+			  for(int j=i;j<array.length;j++) {
+				  for(int k=j;k<array.length;k++) {
+					if(i!=k && i!=j && j!=k)
+					if(array[i]+array[j]+array[k] == targetSum) {
+						Integer[] arr = {array[i],array[j],array[k]};
+						Arrays.sort(arr);
+						list.add(arr);
+					}
+				  }
+			  	}
+			  }
+		  return list;
+		  }
+	  public static void main(String[] args) {
+		  List<Integer[]> list = threeNumberSum(new int[] {12,3,1,2,-6,5,-8,6},0);
+		  for(Integer [] arr : list) {
+			  System.out.println(Arrays.toString(arr));
+		  }
+	}
+}

@@ -1,0 +1,53 @@
+package algo.leet.code;
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack obj = new MinStack();
+ * obj.push(x);
+ * obj.pop();
+ * int param_3 = obj.top();
+ * int param_4 = obj.getMin();
+ */
+
+class Node{
+	int val;
+	Node next;
+	
+	Node(int val){
+		this.val=val;
+		this.next=null;
+	}
+}
+
+class MinStack {
+	Node head;
+		
+	public MinStack() {
+       this.head = null; 
+    }
+    
+    public void push(int x) {
+        Node newNode =  new Node(x);
+        if(head == null) {
+        	head = newNode;
+        	return;
+        }
+        else {
+        	newNode.next = head;
+        	head = newNode;
+        }
+    }
+    
+    public void pop() {
+        
+    }
+    
+    public int top() {
+        
+    }
+    
+    public int getMin() {
+        
+    }
+}
+
+

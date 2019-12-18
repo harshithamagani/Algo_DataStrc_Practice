@@ -1,0 +1,37 @@
+package exmaple.com;
+
+import java.util.Arrays;
+
+public class AlgoExpClosestNumInArrs {
+	  public static int[] smallestDifference(int[] arrayOne, int[] arrayTwo) {
+		int [] newArr = new int [2];
+		Arrays.sort(arrayOne);
+		Arrays.sort(arrayTwo);
+		int i =0;
+		int j = 0;
+		double curr=Double.POSITIVE_INFINITY;
+		double smallestDiff=Double.POSITIVE_INFINITY;
+		while(i<arrayOne.length && j<arrayTwo.length) {
+			int firstNum = arrayOne[i];
+			int secNum = arrayTwo[j];
+			if(firstNum > secNum) {
+				curr = firstNum - secNum;
+				i++;
+			}
+			else if(firstNum < secNum) {
+				curr = secNum - firstNum;
+				j++;
+			}
+			else if(firstNum == secNum) {
+				newArr[0] = firstNum;
+				newArr[1] = secNum;
+				return newArr;
+			}
+			if()
+		}
+		return newArr;
+	  }
+	  public static void main(String[] args) {
+		
+	}
+}

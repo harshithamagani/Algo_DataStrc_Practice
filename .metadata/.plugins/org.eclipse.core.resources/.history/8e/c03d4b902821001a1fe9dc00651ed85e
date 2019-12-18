@@ -1,0 +1,37 @@
+package algo.leet.code;
+
+import java.util.HashMap;
+
+public class Isomorfic {
+    public boolean isIsomorphic(String s, String t) {
+        if(s.length() != t.length()){
+            return false;
+        }
+        int i=0;
+        HashMap<Character, Character> map = new HashMap<>();
+        while(i<s.length()){
+        	if(!map.containsKey(t.charAt(i))){
+                map.put(t.charAt(i),s.charAt(i));
+                i++;
+            }
+            else{
+                Character check1 = map.get(t.charAt(i));
+                Character check2 = new Character(s.charAt(i));
+                		System.out.println(check1+" "+check2);
+                if(check1.equals(check2)){
+                    i++;
+                }
+                else{
+                	System.out.println(check1+" "+check2);
+                    return false;
+                }
+            }  
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+		String s="aa"; String t="ab";
+		Isomorfic i =new Isomorfic();
+		System.out.println(i.isIsomorphic(s, t));
+	}
+}

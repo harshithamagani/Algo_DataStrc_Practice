@@ -1,0 +1,40 @@
+package algo.leet.code;
+
+import exmaple.com.singly.linkedlist.Node;
+
+class ListNode {
+	     int val;
+	      ListNode next;
+	      ListNode(int x) { val = x; }
+	  }
+
+class SingleLinkedList{
+	ListNode head;
+	SingleLinkedList(){
+		this.head=null;
+	}
+	
+	public void insertAtEnd(T data){
+		ListNode newNode=new ListNode(data);
+		Node<T> current = head;
+		//list is empty
+		if(current==null) {
+			head = newNode;
+			size++;
+		}
+		else {
+			while(current.next != null) {
+				current = current.next;
+			}
+			current.next=newNode;
+			size++;
+		}
+	}	
+	
+	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+		
+    }
+}
+class RevListNAddTwoNum {
+
+}

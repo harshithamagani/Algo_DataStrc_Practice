@@ -1,0 +1,35 @@
+package algo.leet.code;
+
+
+
+public class HappyNumber {
+	Node head;
+	
+	public HappyNumber() {
+		// TODO Auto-generated constructor stub
+		this.head =null;
+	}
+	
+	public Node createList(int [] arr ) {
+		Node dummmyHead = new Node(0);
+		Node list = dummmyHead;
+		
+		for(int i=0;i<arr.length;i++) {
+			list.next = new Node(arr[i]);
+			list = list.next;
+		}
+		return dummmyHead.next;
+	}
+	
+	
+
+	public static boolean findIfHappyNumber(int num) {
+		int [] arr =  	Integer.toString(num).chars().map(c -> c-'0').toArray(); 
+		
+		return false;
+	}
+	public static void main(String[] args) {
+		System.out.println(findIfHappyNumber(19));
+	}
+	
+}

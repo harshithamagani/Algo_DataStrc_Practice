@@ -1,0 +1,37 @@
+package algo.leet.code;
+
+import java.util.Arrays;
+
+public class RotatingArray {
+	public static void rotate(int[] nums, int k) {
+		int prev;
+		if(k<=0) {
+			return ;
+		}
+		if(k==nums.length || nums.length==1) {
+			return;
+		}
+		if(k>nums.length) {
+			k=k-nums.length;
+		}
+		int n=nums.length-1; //n length of array
+		int i=n-1;
+		int j=n;
+		int count =0;
+		while(count < k) {
+			while(i>=0) {
+					prev = nums[j];
+					System.out.println("prev:"+prev);
+					nums[j--] = nums[i--];
+					System.out.println("prev:"+prev);
+					nums[0] = prev;
+			}
+			count++;
+		}	
+    }
+	public static void main(String[] args) {
+		int nums [] = {1,2,3,4}; int k=3;
+		rotate(nums,k);
+		System.out.println(Arrays.toString(nums));
+	}
+}

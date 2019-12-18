@@ -1,0 +1,38 @@
+package exmaple.com.tree;
+
+public class BinaryTree {
+	public Node root;
+	
+	public BinaryTree() {
+		this.root = null;
+	}
+	
+	public void insertNode(int data){
+		if(root == null) {
+			Node newNode = new Node(data);
+			root = newNode;
+			return ;
+		}
+		insertNode(data,root);
+	}
+
+	private void insertNode(int data, Node node) {
+		
+		if(data > node.data) {
+			if(node.right == null) {
+				Node newNode = new Node(data);
+				node.right = newNode;
+			}
+			else {
+				insertNode(data ,node.right);
+			}
+		}
+		else {
+			if(node.left == null) {
+				Node newNode = new Node(data);
+				node.left = newNode;
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,17 @@
+package exmaple.com.tree;
+
+public class BinaryTree<T> {
+	public Node<T> root;
+	
+	public BinaryTree() {
+		this.root = null;
+	}
+	
+	public void insertNode(T data){
+		insertNode(data,root);
+	}
+
+	private void insertNode(T data, Node<T> node) {
+		
+	}
+}

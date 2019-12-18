@@ -1,0 +1,9 @@
+package exmaple.com;
+
+import java.util.List;
+
+public class AlgoThreeNumSum {
+	  public static List<Integer[]> threeNumberSum(int[] array, int targetSum) {
+		    // Write your code here.
+		  }
+}

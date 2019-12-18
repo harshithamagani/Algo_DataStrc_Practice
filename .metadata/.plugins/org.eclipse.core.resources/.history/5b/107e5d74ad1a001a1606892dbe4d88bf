@@ -1,0 +1,20 @@
+package exmaple.com;
+
+public class AlgoExpertArrSumm {
+		  public static int[] twoNumberSum(int[] array, int targetSum) {
+		    int[] newArr = new int[2];
+				int i=0;
+				int j=arr.length-1;
+				while(j>i){
+					if(array[i]+array[j] == targetSum){
+						newArr[0]=array[i];
+						newArr[1]=array[j];
+						return newArr;
+					}
+					i++;
+					j--;
+				}
+				return newArr;
+		  }
+		}
+

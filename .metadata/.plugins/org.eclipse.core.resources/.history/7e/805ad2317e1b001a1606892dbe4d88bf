@@ -1,0 +1,17 @@
+package exmaple.com;
+
+import java.util.Arrays;
+
+public class AlgoExpClosestNumInArrs {
+	  public static int[] smallestDifference(int[] arrayOne, int[] arrayTwo) {
+		int [] newArr = new int [2];
+		
+		return newArr;
+	  }
+	  public static void main(String[] args) {
+		  int [] arr1 = {-1,5,10,20,28,3};
+		  int [] arr2 = {26,134,135,15,17};
+		  int [] result = smallestDifference(arr1,arr2);
+		  System.out.println(Arrays.toString(result));
+	}
+}

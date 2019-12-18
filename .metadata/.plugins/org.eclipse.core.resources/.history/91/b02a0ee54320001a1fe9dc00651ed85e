@@ -1,0 +1,37 @@
+package algo.leet.code;
+
+class Node{
+	int val;
+	Node next;
+	
+	Node(int val){
+		this.val=val;
+		this.next=null;
+	}
+}
+
+class MinStack {
+	
+	
+public MinStack() {
+        
+    }
+    
+    public void push(int x) {
+        
+    }
+    
+    public void pop() {
+        
+    }
+    
+    public int top() {
+        
+    }
+    
+    public int getMin() {
+        
+    }
+}
+
+
